@@ -1,0 +1,21 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+
+:root{
+    --color-verde: rgb(31, 140, 16);
+    --color-blanco: #fff;
+    --fuente-titulos: Arial;
+}
+
+.container{
+    padding: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+
+
