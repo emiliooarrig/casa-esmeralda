@@ -2,114 +2,114 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
     });
+  };
 
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Formulario enviado:', formData);
+    alert('Gracias por contactarnos. Nos pondremos en contacto contigo pronto.');
+    setFormData({ name: '', email: '', message: '' });
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Formulario enviado:', formData);
-        alert('Gracias por contactarnos. Nos pondremos en contacto contigo pronto.');
-        setFormData({ name: '', email: '', message: '' });
-    };
+  return (
+    <div className="page-contact container mt-4 mb-4">
+      <div className="contact-header text-center mb-2">
+        <h1>Contáctanos</h1>
+        <p>Estamos aquí para ayudarte a encontrar la joya perfecta.</p>
+      </div>
 
-    return (
-        <div className="page-contact container mt-4 mb-4">
-            <div className="contact-header text-center mb-2">
-                <h1>Contáctanos</h1>
-                <p>Estamos aquí para ayudarte a encontrar la joya perfecta.</p>
+      <div className="contact-grid">
+        <div className="contact-info">
+          <div className="info-item">
+            <Phone className="icon" size={24} />
+            <div>
+              <h3>Teléfono</h3>
+              <p>+52 (55) 1234 5678</p>
             </div>
-
-            <div className="contact-grid">
-                <div className="contact-info">
-                    <div className="info-item">
-                        <Phone className="icon" size={24} />
-                        <div>
-                            <h3>Teléfono</h3>
-                            <p>+52 (55) 1234 5678</p>
-                        </div>
-                    </div>
-                    <div className="info-item">
-                        <Mail className="icon" size={24} />
-                        <div>
-                            <h3>Email</h3>
-                            <p>contacto@casaesmeralda.com</p>
-                        </div>
-                    </div>
-                    <div className="info-item">
-                        <MapPin className="icon" size={24} />
-                        <div>
-                            <h3>Ubicación</h3>
-                            <p>Av. Presidente Masaryk 123, Polanco<br />Ciudad de México, CDMX</p>
-                        </div>
-                    </div>
-
-                    <div className="policies mt-2">
-                        <h3>Políticas de Tienda</h3>
-                        <ul>
-                            <li><a href="#">Envíos y Entregas</a></li>
-                            <li><a href="#">Cambios y Devoluciones</a></li>
-                            <li><a href="#">Garantía de por Vida</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="contact-form-container">
-                    <form onSubmit={handleSubmit} className="contact-form">
-                        <div className="form-group">
-                            <label htmlFor="name">Nombre Completo</label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                required
-                                placeholder="Tu nombre"
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="email">Correo Electrónico</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                required
-                                placeholder="tucorreo@ejemplo.com"
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="message">Mensaje</label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                value={formData.message}
-                                onChange={handleChange}
-                                required
-                                rows="5"
-                                placeholder="¿En qué podemos ayudarte?"
-                            ></textarea>
-                        </div>
-                        <button type="submit" className="btn btn-primary btn-block">
-                            <Send size={18} style={{ marginRight: '8px' }} />
-                            Enviar Mensaje
-                        </button>
-                    </form>
-                </div>
+          </div>
+          <div className="info-item">
+            <Mail className="icon" size={24} />
+            <div>
+              <h3>Email</h3>
+              <p>contacto@casaesmeralda.com</p>
             </div>
+          </div>
+          <div className="info-item">
+            <MapPin className="icon" size={24} />
+            <div>
+              <h3>Ubicación</h3>
+              <p> Hacienda Ojo de Agua <br />Ciudad de México, CDMX</p>
+            </div>
+          </div>
 
-            <style>{`
+          <div className="policies mt-2">
+            <h3>Políticas de Tienda</h3>
+            <ul>
+              <li><a href="/FAQ">Envíos y Entregas</a></li>
+              <li><a href="/FAQ">Cambios y Devoluciones</a></li>
+              <li><a href="/FAQ">Garantía de por Vida</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="contact-form-container">
+          <form onSubmit={handleSubmit} className="contact-form">
+            <div className="form-group">
+              <label htmlFor="name">Nombre Completo</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                placeholder="Tu nombre"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Correo Electrónico</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                placeholder="tucorreo@ejemplo.com"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Mensaje</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows="5"
+                placeholder="¿En qué podemos ayudarte?"
+              ></textarea>
+            </div>
+            <button type="submit" className="btn btn-primary btn-block">
+              <Send size={18} style={{ marginRight: '8px' }} />
+              Enviar Mensaje
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <style>{`
         .contact-grid {
           display: grid;
           grid-template-columns: 1fr;
@@ -198,8 +198,8 @@ const Contact = () => {
           }
         }
       `}</style>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Contact;

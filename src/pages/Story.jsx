@@ -14,16 +14,16 @@ const Story = () => {
           <div className="story-text">
             <h2>Artesanía y Tradición</h2>
             <p>
-              Fundada en 2025, <strong>Casa Esmeralda</strong> nació con la visión de crear piezas de joyería que no solo adornen, sino que cuenten historias.
-              Cada gema es seleccionada a mano por nuestros expertos gemólogos, asegurando que solo las piedras más puras y vibrantes lleguen a nuestro taller.
+              Fundada en 2025, <strong>Casa Esmeralda</strong> nació con la visión de comercializar piezas de joyería que no solo adornen, sino que cuenten historias.
+              Cada joya, es seleccionada a mano, asegurando que solo las piedras más puras y vibrantes lleguen a nuestros clientes.
             </p>
             <p>
-              Nuestra filosofía se basa en la <em>excelencia sin compromisos</em>. Creemos que la verdadera belleza reside en los detalles, y es por eso que nuestros
-              artesanos dedican incontables horas a perfeccionar cada engaste, cada pulido y cada diseño.
+              Nuestra filosofía se basa en la <em>excelencia sin compromisos</em>. Creemos que la verdadera belleza reside en los detalles y en el atrevimiento de
+              ser uno mismo, en el lujo sutíl de ser tú.
             </p>
             <h3>Compromiso con la Calidad</h3>
             <p>
-              Trabajamos exclusivamente con metales preciosos éticamente obtenidos y diamantes libres de conflicto.
+              Trabajamos exclusivamente con metales preciosos éticamente obtenidos y libres de conflicto.
               Cuando adquieres una pieza de Casa Esmeralda, no solo compras una joya, inviertes en un legado de integridad y arte.
             </p>
           </div>
@@ -36,10 +36,12 @@ const Story = () => {
       <style>{`
         .story-hero {
           background-color: var(--color-primary);
-          color: var(--color-white);
           padding: 4rem 0;
           text-align: center;
           margin-bottom: 3rem;
+        }
+        .story-hero h1 {
+          color: var(--color-secondary);
         }
         .story-content {
           display: grid;

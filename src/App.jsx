@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Catalog from './pages/Catalog';
 import Story from './pages/Story';
 import Contact from './pages/Contact';
+import FAQ from './pages/FAQ';
 import './styles/App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/story" element={<Story />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/FAQ" element={<FAQ />} />
           </Routes>
         </main>
         <Footer />
