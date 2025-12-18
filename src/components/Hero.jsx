@@ -2,18 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
-    return (
-        <section className="hero">
-            <div className="hero-overlay">
-                <div className="container hero-content">
-                    <h1>Casa Esmeralda</h1>
-                    <p>Joyería Fina y de Autor</p>
-                    <Link to="/catalog" className="btn btn-secondary">
-                        Ver Catálogo
-                    </Link>
-                </div>
-            </div>
-            <style>{`
+  return (
+    <section className="hero">
+      <div className="hero-overlay">
+        <div className="container hero-content">
+          <h1>Casa Esmeralda</h1>
+          <p> EL lujo sutíl de ser tu </p>
+          <Link to="/catalog" className="btn btn-secondary">
+            Ver Catálogo
+          </Link>
+        </div>
+      </div>
+      <style>{`
         .hero {
           background-image: url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
           background-size: cover;
@@ -48,8 +48,8 @@ const Hero = () => {
           font-size: 1.5rem;
           margin-bottom: 2rem;
           font-weight: 300;
+          font-style: italic;
           letter-spacing: 2px;
-          text-transform: uppercase;
         }
         
         @media (max-width: 768px) {
@@ -61,8 +61,8 @@ const Hero = () => {
           }
         }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 };
 
 export default Hero;
