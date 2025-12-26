@@ -14,21 +14,21 @@ const Home = () => {
 
                 <div className="collections-grid">
                     <div className="collection-item">
-                        <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Colección Nupcial" />
+                        <img src="foto-collar.jpg" alt="Colección Nupcial" />
                         <div className="collection-overlay">
-                            <h3>Nupcial</h3>
+                            <h3> Collares </h3>
                         </div>
                     </div>
                     <div className="collection-item">
-                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Colección Diamantes" />
+                        <img src="foto-aretes.jpg" alt="Colección Diamantes" />
                         <div className="collection-overlay">
-                            <h3>Diamantes</h3>
+                            <h3> Aretes </h3>
                         </div>
                     </div>
                     <div className="collection-item">
-                        <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Colección Oro" />
+                        <img src="foto-anillo.jpg" alt="Colección Oro" />
                         <div className="collection-overlay">
-                            <h3>Oro 18k</h3>
+                            <h3> Anillos </h3>
                         </div>
                     </div>
                 </div>
@@ -120,6 +120,7 @@ const Home = () => {
                         width: 100%;
                         height: 300px;
                         object-fit: cover;
+                        object-position: center 80%;
                     }
                     .product-card h4 {
                         margin: 1rem 0 0.5rem;
@@ -130,7 +131,12 @@ const Home = () => {
                         font-weight: 500;
                         color: var(--color-primary);
                     }
-
+                    
+                    /* Peculiar Card Style */
+                    .peculiar-card img{
+                        object-position: center 60%;
+                    }
+            
                     /* Creator Section */
                     .creator-section {
                         margin-top: 6rem;
@@ -210,12 +216,12 @@ const Home = () => {
                 </div>
                 <div className="best-sellers-grid">
                     {[
-                        { id: 1, name: "Anillo Eternidad", price: "$14,500", img: "https://images.unsplash.com/photo-1605100804763-ebea243bc305?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-                        { id: 2, name: "Collar Minimalista", price: "$9,200", img: "https://images.unsplash.com/photo-1599643478518-17488fbbcd75?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-                        { id: 3, name: "Aretes Perla", price: "$4,800", img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-                        { id: 4, name: "Brazalete Oro", price: "$18,000", img: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+                        { id: 1, name: "Anillo Eternidad", price: "$14,500", img: "best-sellers/anillo-bs.jpg" },
+                        { id: 2, name: "Collar Minimalista", price: "$9,200", img: "best-sellers/collar-bs.jpg" },
+                        { id: 3, name: "Collar Plata", price: "$4,800", img: "best-sellers/collar-plata-bs.jpg" },
+                        { id: 4, name: "Aretes Mar", price: "$18,000", img: "best-sellers/aretes-bs.jpg" }
                     ].map(item => (
-                        <div key={item.id} className="product-card">
+                        <div key={item.id} className={`product-card ${item.id === 4 ? 'peculiar-card' : ''}`}>
                             <img src={item.img} alt={item.name} />
                             <h4>{item.name}</h4>
                             <p className="price">{item.price}</p>
@@ -228,7 +234,7 @@ const Home = () => {
             <section className="container">
                 <div className="creator-section">
                     <div className="creator-image">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="La Creadora" />
+                        <img src="public/foto-creadora.jpg" alt="La Creadora" />
                     </div>
                     <div className="creator-content">
                         <h2>El Alma Detrás de la Joya</h2>

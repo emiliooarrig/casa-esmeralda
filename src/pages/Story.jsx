@@ -28,7 +28,7 @@ const Story = () => {
             </p>
           </div>
           <div className="story-image">
-            <img src="https://images.unsplash.com/photo-1589674781759-c21c37956a44?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Artesano trabajando" />
+            <img src="history/history-foto.jpg" alt="Artesano trabajando" />
           </div>
         </div>
       </div>
